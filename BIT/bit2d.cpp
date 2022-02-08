@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void Mo35() {
+void Alien35() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -47,7 +47,7 @@ struct BIT2D {
 } bit;
 
 
-int main() {  Mo35();
+int main() {  Alien35();
 
 
 

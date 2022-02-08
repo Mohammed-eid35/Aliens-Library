@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void Mo35() {
+void Alien35() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -53,7 +53,7 @@ struct SegmentTree {
 } seg;
 
 
-int main() {  Mo35();
+int main() {  Alien35();
 
     cin >> n;
     for (int i = 0; i < n; ++i) {
