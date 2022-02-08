@@ -46,8 +46,25 @@ struct BIT {
         }
         return st;
     }
-} bit;
+};
 
+struct MultiSet {
+    BIT bit;
+    MultiSet() {
+        bit.init();
+        bit.add(0, -1);
+    }
+    
+    void insert(int val) { bit.add(val, 1); }
+    
+    void erase(int val) { bit.add(val, -1); }
+    
+    int count(int val) { return bit.get(val) - bit.get(val - 1); }
+    
+    int size() { return bit.get(N - 1) + 1; }
+    
+    int at(int idx) { return bit.find(idx); }
+};
 
 int main() {  Alien35();
 
