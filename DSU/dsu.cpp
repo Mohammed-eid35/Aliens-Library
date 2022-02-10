@@ -17,11 +17,12 @@ void Alien35() {
 const int N = 2e5 + 5, M = N, OO = 0x3f3f3f3f, MOD = 1e9 + 7;
 
 struct DSU {
-    int par[N], sz[N];
+    int par[N], sz[N], cnt;
 
     void init(int n) {
         iota(par, par + n, 0);
         fill(sz, sz + n, 1);
+        cnt = n;
     }
 
     int find(int x) {
@@ -36,6 +37,7 @@ struct DSU {
         if(sz[u] < sz[v]) swap(u, v);
         par[v] = u;
         sz[u] += sz[v];
+        cnt--;
         return true;
     }
 } dsu;
